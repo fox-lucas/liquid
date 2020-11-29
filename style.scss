@@ -452,6 +452,52 @@ blockquote {
 }
 
 
+
+
+
+// FEATURED COMPANIES
+.cocaCola {
+    grid-area: cocaCola;
+}
+.godrej {
+    grid-area: godrej;
+}
+.oppo {
+    grid-area: oppo;
+}
+.paypal {
+    grid-area: paypal;
+}
+.philips {
+    grid-area: philips;
+}
+
+.companies {
+    padding-top: 8rem;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "cocaCola godrej oppo paypal philips";
+    img {
+        width: 100%;
+    }
+}
+
+.company {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.company:hover {
+    filter: grayscale(0);
+}
+
+
+
+
+
+
+
 // FOOTER
 .downloadOurApp {
     grid-area: downloadOurApp;
@@ -508,6 +554,7 @@ footer {
     grid-template-areas: 
     "downloadOurApp downloadOurApp downloadOurApp downloadOurApp mission mission mission mission usefulLinks usefulLinks followUs followUs";
 }
+
 
 
 

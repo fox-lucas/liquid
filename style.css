@@ -400,8 +400,7 @@
   display: -ms-grid;
   display: grid;
   grid-gap: 10px;
-  grid-template-areas: "newRelease1 newRelease2 newRelease3 newRelease4"
-  "newRelease5 newRelease6 newRelease7 newRelease8";
+      grid-template-areas: "newRelease1 newRelease2 newRelease3 newRelease4" "newRelease5 newRelease6 newRelease7 newRelease8";
 }
 
 .exclusiveItem {
@@ -537,6 +536,62 @@ blockquote {
   font-size: 1.3rem;
   font-weight: 600;
   padding: 1.4rem 0;
+}
+
+.cocaCola {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: cocaCola;
+}
+
+.godrej {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: godrej;
+}
+
+.oppo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: oppo;
+}
+
+.paypal {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: paypal;
+}
+
+.philips {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: philips;
+}
+
+.companies {
+  padding-top: 8rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+      grid-template-areas: "cocaCola godrej oppo paypal philips";
+}
+
+.companies img {
+  width: 100%;
+}
+
+.company {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+
+.company:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .downloadOurApp {
