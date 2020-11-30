@@ -159,7 +159,7 @@
   height: 100vh;
 }
 
-.landingPage > .container {
+.landingPage .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,7 +341,10 @@
 }
 
 .bestSeller img, .newRelease img {
-  height: 475px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .newRelease1 {
@@ -729,6 +732,31 @@ section.copyrightPlus a {
 @media (max-width: 900px) {
   .container {
     padding: 0 30px;
+  }
+  .menu-list li a {
+    padding: 0 15px;
+  }
+  .landingContent h1 {
+    font-size: 3rem;
+  }
+  .landingContent p {
+    font-size: 1.2rem;
+  }
+  .landingContent button {
+    font-size: 1.2rem;
+  }
+  .categories {
+    display: none;
+  }
+  .bestSellersText {
+    margin-top: 8rem;
+  }
+  .exclusiveItemContent h1 {
+    font-size: 3rem;
+  }
+  .exclusiveItemContent p {
+    font-size: 1.2rem;
+    line-height: 40px;
   }
 }
 
