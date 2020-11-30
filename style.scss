@@ -283,14 +283,14 @@
 
 .bestSellers {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-areas: 
     "bestSeller1 bestSeller2 bestSeller3 bestSeller4";
 }
 
 .bestSeller, .newRelease {
     img{
-        height: 470px;
+        height: 475px;
     }
 }
 
@@ -594,14 +594,33 @@ section.copyrightPlus {
 
 
 
+
+
 @media (max-width: 1230px) {
-  .container{
-    padding: 0 60px;
-  }
+    // BASE
+    .container {
+        padding: 0 60px;
+    }
+
+
+
+    // BEST SELLERS
+    .bestSeller4 {
+        display: none;
+    }
+    
+
+
+    // NEW RELEASES
+    .newRelease4 {
+        display: none;
+    }
+    .newRelease8 {
+        display: none;
+    }
+
+
 }
-
-
-
 
 
 @media (max-width: 1100px) {
