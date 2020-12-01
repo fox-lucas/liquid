@@ -27,7 +27,7 @@
 }
 
 .checked {
-    color: #FF6200
+    color: #FF6200;
 }
 
 .show-desktop {
@@ -51,7 +51,7 @@
 }
 
 .container{
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -272,6 +272,31 @@
     grid-area: bestSeller4;
 }
 
+.bestSellers {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.bestSeller {
+    width: calc(25% - 1rem);
+    height: 100%;
+
+    img{
+        width: 100%;
+    }
+
+    p:nth-of-type(1) {
+        font-size: 1.10rem;
+        padding: .1rem 0;
+        font-weight: 500;
+    }
+    p:nth-of-type(2) {
+        font-size: 1.1rem;
+        padding-top: .15rem;
+    }
+}
+
 .bestSellersText, .newReleaseText {
     text-align: center;
     font-size: 1.8rem;
@@ -281,62 +306,37 @@
     position: relative;
 }
 
-.bestSellers {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-areas: 
-    "bestSeller1 bestSeller2 bestSeller3 bestSeller4";
-}
-
-.bestSeller, .newRelease {
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-
 
 // NEW RELEASES 
-// is there an easier way to do this!?!?!??!
-.newRelease1 {
-  grid-area: newRelease1;
-}
-.newRelease2 {
-  grid-area: newRelease2;
-}
-.newRelease3 {
-  grid-area: newRelease3;
-}
-.newRelease4 {
-  grid-area: newRelease4;
-}
-.newRelease5 {
-  grid-area: newRelease5;
-}
-.newRelease6 {
-  grid-area: newRelease6;
-}
-.newRelease7 {
-  grid-area: newRelease7;
-}
-.newRelease8 {
-  grid-area: newRelease8;
-}
-
 .newReleaseText {
-  margin: 8rem 0 3.5rem 0; 
+    margin: 8rem 0 3.5rem 0; 
 }
 
 .newReleases {
-    display: grid;
-    grid-gap: 10px; 
-    grid-template-areas: 
-    "newRelease1 newRelease2 newRelease3 newRelease4"
-    "newRelease5 newRelease6 newRelease7 newRelease8";
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
 }
 
+.newRelease {
+    width: calc(25% - 1rem);
+    height: 100%;
+    
+    img{
+        width: 100%;
+    }
+
+    p:nth-of-type(1) {
+        font-size: 1.10rem;
+        padding: .1rem 0;
+        font-weight: 500;
+    }
+    p:nth-of-type(2) {
+        font-size: 1.1rem;
+        padding-top: .15rem;
+    }
+    
+}
 
 
 
@@ -363,7 +363,7 @@
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 45px;
     }
 
@@ -375,7 +375,7 @@
         padding: 1rem 3rem;
         color: white;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         cursor: pointer;
         opacity: 0.7;
         transition: 0.3s;
@@ -477,11 +477,10 @@ blockquote {
 .companies {
     padding-top: 8rem;
     display: grid;
-    grid-gap: 60px;
     grid-template-areas: 
     "cocaCola godrej oppo paypal philips";
     img {
-        width: 100%;
+        width: 75%;
     }
 }
 
@@ -492,7 +491,7 @@ blockquote {
 
 .company:hover {
     filter: grayscale(0);
-}
+}   
 
 
 
@@ -558,7 +557,7 @@ footer {
 }
 
 .footerContainer {
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
     display: grid;
@@ -581,7 +580,7 @@ section.copyrightPlus {
 } 
 
 .copyright {
-    padding-bottom: 1rem;
+    padding-bottom: .7rem;
 }
 
 .madeByMe {
@@ -604,22 +603,6 @@ section.copyrightPlus {
         padding: 0 60px;
     }
 
-
-
-    // BEST SELLERS
-    .bestSeller4 {
-        display: none;
-    }
-    
-
-
-    // NEW RELEASES
-    .newRelease4 {
-        display: none;
-    }
-    .newRelease8 {
-        display: none;
-    }
 
 
 }
@@ -648,60 +631,7 @@ section.copyrightPlus {
             padding: 0 15px;
         }
     }
-
-
-
-    // LANDING PAGE
-    .landingContent {
-
-
-        h1 {
-            font-size: 3rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        button {
-            font-size: 1.2rem;
-        }
-    }
-
-
-
-
-    // CATEGORY PICTUES
-    .categories {
-        display: none;
-    }
-
-
-
-
-
-    // BEST SELLERS
-    .bestSellersText {
-        margin-top: 8rem;
-    }
-
-
-
-
-
-    // EXCLUSIVE ITEM 
-    .exclusiveItemContent {
-
-
-        h1 {
-            font-size: 3rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 40px;
-        }
-    }
+    
 }
 
 
