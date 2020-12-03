@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 .zoom {
     transition: transform .3s;
 }
@@ -67,16 +68,19 @@
     padding: 25px 0;
     transition: all 0.3s ease;
 }
+
 .navbar.sticky{
     background: #FF6200;
     padding: 10px 0;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
 }
+
 .navbar .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .navbar .logo a{
     color: #fff;
     font-size: 30px;
@@ -84,9 +88,11 @@
     text-decoration: none;
     text-align: center;
 }
+
 .navbar .menu-list{
     display: inline-flex;
 }
+
 .menu-list li{
     list-style: none;
 
@@ -113,6 +119,7 @@
     cursor: pointer;
     display: none;
 }
+
 .menu-list .cancel-btn{
     position: absolute;
     right: 30px;
@@ -180,10 +187,12 @@
     flex: .5;
 
     img {
-        width: 110%;
+        width: 100%;
         pointer-events: none;
     }
 }
+
+
 
 
 
@@ -235,6 +244,8 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+
 
 
 
@@ -449,7 +460,6 @@ blockquote {
 .companies {
     padding: 6rem 0;
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
     img {
         width: 100%;
@@ -473,8 +483,8 @@ blockquote {
 
 
 // FOOTER
-.followUsFooter {grid-area: followUs}
-.newsletter {grid-area: newsletter}
+.followUsFooter {padding-top: 2rem; grid-area: followUs}
+.newsletter {padding-top: 2rem; grid-area: newsletter}
 .menFooter {grid-area: men}
 .womenFooter {grid-area: women}
 .supportFooter {grid-area: support}
@@ -502,7 +512,7 @@ footer {
         list-style-type: none;
 
         li {
-            font-size: 1rem;
+            font-size: .95rem;
             padding: 0.3rem 0;
         }
     }
@@ -537,8 +547,9 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: 13px;
+    font-size: 13.5px;
     color: rgb(98, 98, 98);
+    padding-bottom: 1rem;
 
     a {
         color: white;
@@ -597,6 +608,18 @@ footer {
     }
 
 
+
+
+    // FOOTER
+    .footerContainer {
+        form {
+            input {
+                width: 225px;
+            }
+        }
+    }
+
+
 }
 
 
@@ -613,6 +636,8 @@ footer {
 
 
 
+    
+
     // NAVBAR
     .menu-list li {
 
@@ -620,6 +645,7 @@ footer {
             padding: 0 20px;
         }
     }
+
 
 
 
@@ -667,6 +693,25 @@ footer {
     .exclusiveItemImg {
         flex: .5;
     }
+
+
+
+
+
+    // FOOTER
+    .footerContainer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "men women support"
+        "followUs newsletter .";
+
+        form {
+            input {
+                width: 200px;
+            }
+        }
+    }
 }
 
 
@@ -713,6 +758,12 @@ footer {
         width: calc(50% - 1rem);
     }
 
+    .newRelease5 {
+        display: none;
+    }
+    .newRelease6 {
+        display: none;
+    }
     .newRelease7 {
         display: none;
     }
@@ -848,9 +899,316 @@ footer {
 
 
 
+@media (max-width: 750px) {
+    .navbar .logo a{
+      font-size: 27px;
+    }
 
-@media (max-width: 380px) {
-  .navbar .logo a{
-    font-size: 27px;
-  }
+
+
+
+    // LANDING PAGE
+    .landingPage .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .landingContent {
+        flex: 1;
+    }
+
+    .landingImage {
+        display: none;
+    }
+
+
+
+
+
+
+
+    // EXCLUSIVE ITEM
+    .exclusiveItem {
+        margin-bottom: 4rem;
+    }
+
+    .exclusiveItem .container {
+        display: block;
+    }
+
+    .exclusiveItemContent {
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .exclusiveItemImg {
+        margin: 0 auto;
+        width: 45%;
+    }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    // TESTIMONIALS
+    .testimonials {
+        padding-bottom: 4rem;
+    }
+
+
+
+
+
+    // FEATUREED COMPANY LOGOS
+    .companies {
+        display: none;
+    }
+    
+}
+
+
+
+
+ @media (max-width: 575px) {
+    // FOOTER
+    .footerContainer {
+        grid-template-areas: 
+        "men women support"
+        "followUs newsletter newsletter";
+    }
+}
+
+
+
+
+@media (max-width: 525px) {
+    // BEST SELLER
+    .bestSeller {
+        width: 100%;
+    }
+
+    .bestSeller3 {
+        display: none;
+    }
+    .bestSeller4 {
+        display: none;
+    }
+
+
+
+
+    // NEW RELEASE
+    .newRelease {
+        width: 100%;
+    }
+    
+    .newRelease3 {
+        display: none;
+    }
+    .newRelease4 {
+        display: none;
+    }
+
+
+
+    // EXCLUSIVE ITEM
+    .exclusiveItemImg {
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 470px) {
+
+    // FOOTER
+    .footerContainer {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "men men women women"
+        "support support followUs followUs"
+        "newsletter newsletter newsletter newsletter";
+
+
+        form {
+            input {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .supportFooter {
+        padding-top: 2rem;
+    }
+
+    .footerContainer {
+        padding-bottom: 0;
+    }
+
+    .footerInfo {
+        display: block;
+        text-align: center;
+    }
+
+    .watermark {
+        padding-top: .5rem;
+    }
+}
+
+
+
+
+
+@media (max-width: 350px) {
+    // LANDING PAGE
+    .landingContent {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+    }
+
+
+
+    // BEST SELLERS
+    .bestSeller:nth-of-type(2) {
+        margin-bottom: 0;
+    }
+
+
+
+
+    // EXCLUSIVE ITEM
+    .exclusiveItemContent {
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    p.onlyavailablehere {
+        font-size: 12px;
+        opacity: 0.6;
+    }
+
+
+
+
+    // TESTIMONIALS
+    .testimonials {
+        display: none;
+    }
+
+
+
+
+    .footerContainer {
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        ul {
+            li {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 300px) {
+    .bestSellersText, .newReleaseText {
+        font-size: 1.5rem;
+    }
+    // EXCLUSIVE ITEM
+    .exclusiveItemContent {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: .9rem;
+            line-height: 38px;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+    }
+
+    .exclusiveItemContainer p:nth-of-type(1) {
+        font-size: .8rem;
+        opacity: 0.6;
+    }
+
+
+
+
+    // TESTIMONIALS
+    .testimonials {
+        display: none;
+    }
+
+
+
+
+    .footerContainer {
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        ul {
+            li {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 270px) {
+    // FOOTER
+    .footerContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "men"
+        "women"
+        "support"
+        "followUs"
+        "newsletter";
+    }
 }
