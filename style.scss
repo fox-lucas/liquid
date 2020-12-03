@@ -188,82 +188,60 @@
 
 
 // CATEGORY PICTURES
-.categoryImage1 {
-  grid-area: categoryImage1;
-}   
-.categoryImage2 {
-  grid-area: categoryImage2;
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-.categoryImage3 {
-  grid-area: categoryImage3;
-}
-
 .cImg {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .categories {
     padding: 8rem 0;
-    display: grid;
-    grid-template-areas: 
-    "categoryImage1 categoryImage2 categoryImage3"; 
-    grid-gap: 25px;
-    img {
-        width: 100%;
-    }
+    display: flex;
+    justify-content: space-between;
 }
-
 
 // hover effect
 .category {
-  position: relative;
+    position: relative;
+    width: calc(100% - 1rem)
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #f6a364;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #f6a364;
 }
 
 .category:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
 
 //  BEST SELLERS
-
 .bestSellers {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 2rem;
 }
@@ -318,12 +296,14 @@
 .newReleases {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
 .newRelease {
     width: calc(25% - 1rem);
     height: 100%;
+    margin-bottom: 2rem;
     
     img{
         width: 100%;
@@ -419,25 +399,15 @@ p.onlyavailablehere {
 
 
 // TESTIMONIALS
-.testimonial1 {
-    grid-area: testimonial1;
-}
-.testimonial2 {
-    grid-area: testimonial2;
-}
-.testimonial3 {
-    grid-area: testimonial3;
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .testimonial {
     padding: 3rem 0;
-}
-
-.testimonials {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas: 
-    "testimonial1 testimonial2 testimonial3";
+    width: calc(33% - 1rem);
 }
 
 .quote {
@@ -476,35 +446,20 @@ blockquote {
 
 
 // FEATURED COMPANIES
-.cocaCola {
-    grid-area: cocaCola;
-}
-.godrej {
-    grid-area: godrej;
-}
-.oppo {
-    grid-area: oppo;
-}
-.paypal {
-    grid-area: paypal;
-}
-.philips {
-    grid-area: philips;
-}
-
 .companies {
-    padding-top: 8rem;
-    display: grid;
-    grid-template-areas: 
-    "cocaCola godrej oppo paypal philips";
+    padding: 6rem 0;
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
     img {
-        width: 75%;
+        width: 100%;
     }
 }
 
 .company {
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
+    width: calc(100% - 1rem)
 }
 
 .company:hover {
@@ -518,97 +473,79 @@ blockquote {
 
 
 // FOOTER
-.downloadOurApp {
-    grid-area: downloadOurApp;
-}
-.mission {
-    grid-area: mission;
-}
-.usefulLinks {
-    grid-area: usefulLinks;
-}
-.followUs {
-    grid-area: followUs;
-}
-
+.followUsFooter {grid-area: followUs}
+.newsletter {grid-area: newsletter}
+.menFooter {grid-area: men}
+.womenFooter {grid-area: women}
+.supportFooter {grid-area: support}
 
 footer {
-    margin-top: 8rem;
-    background: #000;
-    color: white;
-    text-align: center;
-    height: 32vh;
-    display: flex;
-    align-items: center;
+    background: rgb(8, 8, 8);
+}
 
+.footerContainer {
+    color: white;
+    display: grid;
+    padding: 3rem 0;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    "men women support followUs newsletter newsletter";
+
+    
 
     h2 {
-        padding-bottom: 1rem;
+        font-size: 1.6rem;
     }
 
-    img {
-        width: 45%;
-    }
 
     ul {
         list-style-type: none;
 
         li {
-            padding: .3rem 0;
-
-            &:nth-child(1) {
-                padding-top: 0;
-            }
+            font-size: 1rem;
+            padding: 0.3rem 0;
         }
-        
-        a {
-            color: #fff;
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s ease-in-out;
+    }
 
-            &:hover {
-                opacity: 1;
-            }
+
+    form {
+        input {
+            background: none;
+            border: 1px solid white;
+            padding: 10px;
+            color: white;
+            margin: .7rem 0;
+            width: 250px;
+        }
+
+        button {
+            background: white;
+            color: #000;
+            font-weight: 500;
+            padding:10px;
+            border: 1px solid white;
         }
     }
 }
 
-.footerContainer {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
-    "downloadOurApp downloadOurApp downloadOurApp downloadOurApp mission mission mission mission usefulLinks usefulLinks followUs followUs";
+::placeholder {
+    color: white;
+    opacity: 0.7;
 }
 
-
-section.copyrightPlus {
-    text-align: center;
-    background-color: #000;
-    padding-bottom: 4rem;
+.footerInfo {
+    display: flex;
+    justify-content: space-between;
     color: white;
+    font-size: 13px;
+    color: rgb(98, 98, 98);
 
     a {
         color: white;
         text-decoration: none;
     }
-} 
-
-.copyright {
-    padding-bottom: .7rem;
 }
 
-.madeByMe {
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
-}
 
 
 
@@ -661,6 +598,11 @@ section.copyrightPlus {
 
 
 }
+
+
+
+
+
 
 
 @media (max-width: 1100px) {
@@ -731,12 +673,10 @@ section.copyrightPlus {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .container{
         padding: 0 40px;
     }
-
-    
 
     // NAVBAR
     .menu-list li {
@@ -746,13 +686,89 @@ section.copyrightPlus {
     }
 
 
+
+
+    // LANDING PAGE
+    .landingImage {
+        flex: .6;
+    }
+
+
+
     
 
-    // BEST SELLER
+
+    // BEST SELLERS
     .bestSeller {
         width: calc(50% - 1rem)
     }
-    
+
+
+
+
+
+
+    //  NEW RELEASES 
+    .newRelease {
+        width: calc(50% - 1rem);
+    }
+
+    .newRelease7 {
+        display: none;
+    }
+    .newRelease8 {
+        display: none;
+    }
+
+
+
+
+
+
+    // EXCLUSIVE ITEM
+    .exclusiveItemContainer {
+        padding: 4rem 40px;
+    }
+
+
+
+
+
+    // TESTIMONIALS
+
+
+    .testimonial {
+        width: 100%;
+        margin: 1rem 0;
+
+
+        img {
+            width: 18%;
+        }
+    }
+
+
+
+
+
+
+    // FEATURED COMPANIES
+    .companies {
+        padding-top: 4rem;
+    }
+
+    .company {
+        filter: grayscale(0);
+    }
+
+
+
+
+    // FOOTER
+    .footerInfo {
+        display: flex;
+        align-items: center;
+    }
 }
 
 
@@ -808,6 +824,25 @@ section.copyrightPlus {
         margin-left: 0px;
     }
 
+
+
+
+
+
+
+    //  CATEGORY PICTURES
+    .categories {
+        display: none;  
+    }
+
+
+
+
+
+    // BEST SELLERS
+    .bestSellersText {
+        margin-top: 8rem;
+    }
 }
 
 
