@@ -154,6 +154,121 @@
   color: white;
 }
 
+.followUsFooter {
+  padding-top: 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: followUs;
+}
+
+.newsletter {
+  padding-top: 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: newsletter;
+}
+
+.menFooter {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: men;
+}
+
+.womenFooter {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: women;
+}
+
+.supportFooter {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: support;
+}
+
+footer {
+  background: #080808;
+}
+
+.footerContainer {
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  padding: 3rem 0;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "men women support followUs newsletter newsletter";
+}
+
+.footerContainer h2 {
+  font-size: 1.6rem;
+}
+
+.footerContainer ul {
+  list-style-type: none;
+}
+
+.footerContainer ul li {
+  font-size: .95rem;
+  padding: 0.3rem 0;
+}
+
+.footerContainer form input {
+  background: none;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  margin: .7rem 0;
+  width: 250px;
+}
+
+.footerContainer form button {
+  background: white;
+  color: #000;
+  font-weight: 500;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+::-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.footerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  font-size: 13.5px;
+  color: #626262;
+  padding-bottom: 1rem;
+}
+
+.footerInfo a {
+  color: white;
+  text-decoration: none;
+}
+
 .landingPage {
   background-image: linear-gradient(315deg, #ffc085 0%, #f6a364 74%);
   height: 100vh;
@@ -522,121 +637,6 @@ blockquote {
 .company:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-}
-
-.followUsFooter {
-  padding-top: 2rem;
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: followUs;
-}
-
-.newsletter {
-  padding-top: 2rem;
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 2;
-  grid-area: newsletter;
-}
-
-.menFooter {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: men;
-}
-
-.womenFooter {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: women;
-}
-
-.supportFooter {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: support;
-}
-
-footer {
-  background: #080808;
-}
-
-.footerContainer {
-  color: white;
-  display: -ms-grid;
-  display: grid;
-  padding: 3rem 0;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-areas: "men women support followUs newsletter newsletter";
-}
-
-.footerContainer h2 {
-  font-size: 1.6rem;
-}
-
-.footerContainer ul {
-  list-style-type: none;
-}
-
-.footerContainer ul li {
-  font-size: .95rem;
-  padding: 0.3rem 0;
-}
-
-.footerContainer form input {
-  background: none;
-  border: 1px solid white;
-  padding: 10px;
-  color: white;
-  margin: .7rem 0;
-  width: 250px;
-}
-
-.footerContainer form button {
-  background: white;
-  color: #000;
-  font-weight: 500;
-  padding: 10px;
-  border: 1px solid white;
-}
-
-::-webkit-input-placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
-:-ms-input-placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
-::-ms-input-placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
-::placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
-.footerInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: white;
-  font-size: 13.5px;
-  color: #626262;
-  padding-bottom: 1rem;
-}
-
-.footerInfo a {
-  color: white;
-  text-decoration: none;
 }
 
 @media (max-width: 1230px) {
